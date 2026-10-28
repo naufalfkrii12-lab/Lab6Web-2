@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum DOM dan Event - Naufal Fikri</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Praktikum 6: JavaScript DOM dan Event Handling</h1>
+        <p>Nama: <strong>Naufal Fikri</strong> | NIM: <strong>312510350</strong></p>
+    </header>
+
+    <main>
+        <!-- Latihan 1 & 2 -->
+        <section class="card">
+            <h2>Latihan 1 & 2: Manipulasi Teks & Event Click</h2>
+            <h3 id="judul">Latihan DOM</h3>
+            <p id="pesan">Belum ada tindakan.</p>
+            <button id="tombolAksi" type="button">Klik Saya</button>
+        </section>
+
+        <!-- Latihan 3 -->
+        <section class="card">
+            <h2>Latihan 3: Mengubah Kelas & Gaya CSS</h2>
+            <p id="teksGaya">Paragraf ini akan berubah gaya dan ukurannya saat tombol diklik.</p>
+            <button id="tombolGaya" type="button">Ubah Gaya Teks</button>
+        </section>
+
+        <!-- Latihan 4 -->
+        <section class="card">
+            <h2>Latihan 4: Event Input & Penghitung Karakter</h2>
+            <label for="namaInput">Nama:</label>
+            <input type="text" id="namaInput" maxlength="40" placeholder="Ketik nama di sini...">
+            <p>Jumlah karakter: <span id="jumlahKarakter">0</span> / 40</p>
+        </section>
+
+        <!-- Latihan 5 -->
+        <section class="card">
+            <h2>Latihan 5: Validasi Form Pendaftaran</h2>
+            <form id="formPendaftaran" novalidate>
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input id="nama" name="nama" type="text" placeholder="Masukkan nama">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="contoh@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="usia">Usia</label>
+                    <input id="usia" name="usia" type="number" min="17" max="100" placeholder="17-100">
+                </div>
+                <button type="submit">Daftar</button>
+            </form>
+            <p id="pesanForm" class="pesan-notif" aria-live="polite"></p>
+        </section>
+
+        <!-- Latihan 6 & Eksperimen Mandiri 1 -->
+        <section class="card">
+            <h2>Latihan 6: Daftar Tugas Sederhana (To-Do List)</h2>
+            <div class="form-group row">
+                <input id="inputTugas" type="text" placeholder="Tugas baru...">
+                <button id="tambahTugas" type="button">Tambah</button>
+            </div>
+            <p id="pesanTugas" class="pesan-notif" aria-live="polite"></p>
+            <ul id="daftarTugas"></ul>
+        </section>
+
+        <!-- Mini Project: Form Pendaftaran Workshop -->
+        <section class="card highlight-card">
+            <h2>Mini Project: Form Pendaftaran Workshop</h2>
+            <form id="formWorkshop" novalidate>
+                <div class="form-group">
+                    <label for="namaWorkshop">Nama Lengkap (Min. 3 karakter)</label>
+                    <input id="namaWorkshop" type="text" placeholder="Nama peserta">
+                    <small>Karakter: <span id="charWorkshop">0</span></small>
+                </div>
+                <div class="form-group">
+                    <label for="emailWorkshop">Email</label>
+                    <input id="emailWorkshop" type="email" placeholder="email@domain.com">
+                </div>
+                <div class="form-group">
+                    <label for="sesiWorkshop">Pilih Sesi Workshop</label>
+                    <select id="sesiWorkshop">
+                        <option value="">-- Pilih Sesi --</option>
+                        <option value="Sesi Pagi (09.00 - 12.00)">Sesi Pagi (09.00 - 12.00)</option>
+                        <option value="Sesi Siang (13.00 - 16.00)">Sesi Siang (13.00 - 16.00)</option>
+                        <option value="Sesi Malam (19.00 - 21.00)">Sesi Malam (19.00 - 21.00)</option>
+                    </select>
+                    <p id="infoSesi" class="info-text"></p>
+                </div>
+                <div class="button-group">
+                    <button type="submit">Daftar Workshop</button>
+                    <button id="btnResetWorkshop" type="button" class="btn-secondary">Reset Form</button>
+                </div>
+            </form>
+            <p id="pesanWorkshop" class="pesan-notif" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Lab6Web - Naufal Fikri (312510350)</p>
+    </footer>
+</body>
+</html>
